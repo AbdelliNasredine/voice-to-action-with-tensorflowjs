@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- css style -->
+    <link rel="stylesheet" href="css/main.css" />
+    <title>VTA - Voice To Action</title>
+  </head>
+  <body>
+    <!-- note : VTA = Voice To Action -->
+    <!-- BEGIN -->
+    <div class="vta__container">
+      <div class="vta__header">
+        <h2>VTA - Voice To Action Prototype</h2>
+        <p>
+          A simple example of voice recognition using
+          <strong>tensorflow.js</strong> and
+          <strong>speech-commands</strong> model <br />
+          <i
+            ><strong>Note:</strong> the speech-commands model classify only
+            these words: "zero" to "nine", "up", "down", "left", "right", "go",
+            "stop", "yes", "no",
+            <a
+              href="https://github.com/tensorflow/tfjs-models/tree/master/speech-commands"
+              >find more about speech commands</a
+            >
+          </i>
+        </p>
+        <button class="vta__button" data-status="false">
+          start recognizing
+        </button>
+      </div>
+      <div class="vta__content vta-hidden">
+        <div>
+          <h5>possible words</h5>
+          <ul class="vta__words"></ul>
+        </div>
+        <div>
+          <h5>Say a word</h5>
+          <p class="vta__result"></p>
+        </div>
+      </div>
+      <div class="vta__progress vta-hidden">
+        <span>Loading Model...</span>
+      </div>
+    </div>
+    <!-- END -->
+
+    <!-- tensorflow.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+    <!-- tensorflow speech commands model -->
+    <script src="https://unpkg.com/@tensorflow-models/speech-commands"></script>
+    <!-- main.js script -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>
